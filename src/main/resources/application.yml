@@ -1,2 +1,26 @@
 server:
   port: 8082
+
+spring:
+  devtools:
+    livereload:
+      enabled: true
+      # thymeleaf cache 비활성화
+
+  thymeleaf:
+    cache: false
+
+  # DB 연결(DataSource 인터페이스)
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/core_shop
+    username: csadmin
+    password: 123$
+
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
