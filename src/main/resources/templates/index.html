@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- xmlns: XML NameSpace 를 내가 th 라는 약어로 앞으로 쓸거야-->
+<html lang="ko" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CORE SHOP | 메인</title>
+</head>
+
+<body>
+    <!-- 헤더 영역: 시멘틱(의미있는) 태그 -->
+    <header>
+        <div class="contents">
+            <div>
+                <img src="http://via.placeholer.com/48x48" alt="">
+                <span>CORE SHOP</span>
+            </div>
+
+            <div class="btns">
+                <a href="/signup">회원가입</a>
+                <a href="/login">로그인</a>
+                <a href="/logout">로그아웃</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 영역-->
+    <main role="main">
+        <div class="contents">
+            <h1>상품 목록</h1>
+
+            <!-- List<Product> xxx; xxx.get(i); -->
+            <div th:each="item : ${result}">
+                상품명: <span th:text="${item.name}">NIKE</span>
+                가격: <span>4,560</span>
+                상세: <span>이페스스노이페스스노이페스스노</span>
+                등록일: <span>2023-03-05</span>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+</html>
